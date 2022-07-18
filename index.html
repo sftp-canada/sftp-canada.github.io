@@ -35,6 +35,11 @@ body {font-size:22px;}
   </div>
 </nav>
 
+<div id="navbar">
+  <a href="indexFR.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="font-size:28px">Français</a> 
+  <a href="index.html" class="w3-bar-item w3-button w3-white" style="font-size:28px">English</a> 
+</div>
+
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
@@ -63,7 +68,7 @@ body {font-size:22px;}
      <p>This Canadian chapter, formed in 2022, reflects the growing struggles that radical scientists from coast to coast are engaged in everyday. Radical scientists are everywhere, young and old, inside and outside of establishment institutions– but we need to organize to find one another.</p>
 
     <p>If you are a radical scientist in Canada who understands that our present institutions serve to legitimize capitalist ideology and advance the material interests of the ruling class, you may feel isolated at your place of work– but you are not alone! If you are developing a scientific practice outside of an established institution and want to meet other like-minded scientists with whom to learn and struggle, we want to be friends (and comrades). Join us, and let’s get to know one another!</p>
-    <a href="docs/sftp_canada_values.pdf" target="blank" style="text-decoration:none"><button type="submit" class="w3-button w3-block w3-padding-large w3-red ">Read our statement of values <i class="fa fa-external-link" style="font-size:18px"></i></button></a>
+    <a href="docs/sftp_canada_values.pdf" target="blank" style="text-decoration:none"><button type="submit" class="w3-button w3-block w3-padding-large w3-red ">Read our statement of values<i class="fa fa-external-link" style="font-size:18px"></i></button></a>
     <a href="https://magazine.scienceforthepeople.org/" target="blank" style="text-decoration:none"><button type="submit" class="w3-button w3-block w3-padding-large w3-red">View the magazine <i class="fa fa-external-link" style="font-size:18px"></i> </button></a>
 </div>
 
@@ -136,6 +141,27 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+//THIS IS ALL LANGUAGE BAR
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+//END LANGUAGE BAR
 </script>
 
 </body>
